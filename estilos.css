@@ -1,7 +1,42 @@
 /*Luego agrego mas codigo para el maquillaje primero es de hacer la estructura*/
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+body {
+    background-color: rgb(219, 217, 217);
+}
+#menu ul{
+    list-style:none;
+    margin:0;
+    padding:0;
+}
 
-div {
-    align-content: center;
-    background-color: black;
+#menu ul li {
+    float:left;
+}
+#menu a {
+    color:rgba(red, green, blue, alpha);
+    text-decoration:none;
+    display:block;
+    padding:12px 64px;
+    font-family:"Oswald";
+    font-size:22px;
+}
+
+#menu{
+   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffb76b+0,ffa73d+50,ff7c00+51,ff7f04+100;Orange+Gloss */
+background: rgb(255,183,107); /* Old browsers */
+background: -moz-linear-gradient(top, rgba(255,183,107,1) 0%, rgba(255,167,61,1) 50%, rgba(255,124,0,1) 51%, rgba(255,127,4,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, rgba(255,183,107,1) 0%,rgba(255,167,61,1) 50%,rgba(255,124,0,1) 51%,rgba(255,127,4,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, rgba(255,183,107,1) 0%,rgba(255,167,61,1) 50%,rgba(255,124,0,1) 51%,rgba(255,127,4,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffb76b', endColorstr='#ff7f04',GradientType=0 ); /* IE6-9 */
+    width:1335px;
+    height:52px
+}
+.barra{
+    color:rgb(17, 17, 16);
+    padding:15px 0 0 0 ;
+}
+#menu a:hover{
+    color:seashell;
+    background:rgba(245, 5, 5, 0.2);
 }
 
