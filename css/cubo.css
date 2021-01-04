@@ -1,0 +1,212 @@
+h2 {
+  margin-top: 0;
+}
+
+.viewport {
+  -webkit-perspective: 800px;
+  -webkit-perspective-origin: 50% 200px;
+  -webkit-transform: scale(0.75,0.75);
+  -moz-perspective: 800px;
+  -moz-perspective-origin: 50% 200px;
+  -moz-transform: scale(0.75,0.75);
+  perspective: 800px;
+  perspective-origin: 50% 200px;
+  transform: scale(0.75,0.75);
+}
+
+.cube {
+  position: relative;
+  margin: 0 auto 100px;
+  height: 400px;
+  width: 400px;
+  -webkit-transition: -webkit-transform 50ms linear;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transform: rotateX(-10deg) rotateY(20deg);
+  -moz-transition: -moz-transform 50ms linear;
+  -moz-transform-style: preserve-3d;
+  -moz-transform: rotateX(-10deg) rotateY(20deg);
+  transition: transform 50ms linear;
+  transform-style: preserve-3d;
+  transform: rotateX(-10deg) rotateY(20deg);
+}
+
+.cube h2 {
+  color: #fff;
+  padding-top: 0;
+  margin-top: 0;
+}
+
+.cube a {
+  color: #fff;
+}
+
+.cube > div {
+  position: absolute;
+  height: 360px;
+  width: 360px;
+  padding: 20px;
+  background-color: rgba(50, 50, 50, 0.85);
+  font-size: 1em;
+  line-height: 1em;
+  color: #fff;
+  border: 1px solid #555;
+  border-radius: 3px;
+}
+
+.cube > div:first-child  {
+  -webkit-transform: rotateX(90deg) translateZ(200px);
+  -moz-transform: rotateX(90deg) translateZ(200px);
+  transform: rotateX(90deg) translateZ(200px);
+}
+
+.cube > div:nth-child(2) {
+  -webkit-transform: translateZ(200px);
+  -moz-transform: translateZ(200px);
+  transform: translateZ(200px);
+}
+
+.cube > div:nth-child(3) {
+  -webkit-transform: rotateY(90deg) translateZ(200px);
+  -moz-transform: rotateY(90deg) translateZ(200px);
+  transform: rotateY(90deg) translateZ(200px);
+  text-align: center;
+}
+
+.cube > div:nth-child(4) {
+  -webkit-transform: rotateY(180deg) translateZ(200px);
+  -moz-transform: rotateY(180deg) translateZ(200px);
+  transform: rotateY(180deg) translateZ(200px);
+}
+
+.cube > div:nth-child(5) {
+  -webkit-transform: rotateY(-90deg) translateZ(200px);
+  -moz-transform: rotateY(-90deg) translateZ(200px);
+  transform: rotateY(-90deg) translateZ(200px);
+}
+
+.cube > div:nth-child(5) p {
+  text-align: center;
+  font-size: 2.77em;
+  margin: 40px;
+  line-height: 60px;
+}
+
+.cube > div:nth-child(6) {
+  -webkit-transform: rotateX(-90deg) rotate(180deg) translateZ(200px);
+  -moz-transform: rotateX(-90deg) rotate(180deg) translateZ(200px);
+  transform: rotateX(-90deg) rotate(180deg) translateZ(200px);
+}
+
+object {
+  opacity: 0.5;
+}
+
+object:hover {
+  opacity: 1;
+}
+
+/*--------------------------------------------*/
+header {
+  width: 100%;
+  height: 50px;
+  background: rgb(240, 157, 4);
+  color: #000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.menubg {
+  width: 98%;
+  margin: auto;
+}
+
+h2 {
+  float: left;
+  font-size: 50px;
+}
+
+header .menubg {
+  display: table;
+}
+
+.contenedor {
+  width: 98%;
+  margin: auto;
+}
+
+/* ---------------------------Menu------------------------*/
+#menu-bar {
+  display: none;
+}
+
+header label {
+  float: right;
+  font-size: 28px;
+  margin: 6px 0;
+  cursor: pointer;
+}
+
+.menu {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #000;
+  transition: all 0.5s;
+  transform: translateX(-100%);
+
+}
+
+.menu a {
+  display: block;
+  color: #fff;
+  height: 0px;
+  text-decoration: none;
+  padding: 25px;
+  border-bottom: 1px solid rgba(255,255,255, 0.5);
+}
+
+.menu a:hover{
+  background: rgba(255,255,255, 0.3);
+}
+
+#menu-bar:checked ~ .menu {
+transform: translateX(0%);
+}
+
+#Informacion{
+  text-align: center;
+  flex-wrap: wrap;
+  margin: 50px;
+  /*color: ;*/
+}
+
+body {
+  /*background-image: url(../images/background.jpg);*/
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/*--------Estilos resposive------------------------*/
+@media (min-width:1024px) {
+	.menu {
+		position: static;
+		width: auto;
+		height: auto;
+		transform: translateX(0%);
+		float: right;
+		display: flex;
+	}
+	
+	.menu a {
+		border: none;
+	}
+	
+	header label { 
+		display: none;
+	}
+}
+/*----------------------footer------------------------------*/
